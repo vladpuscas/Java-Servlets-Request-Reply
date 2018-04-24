@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <a href="addFlight">Add a new Flight</a>
+    <a href="searchFlight">Search Flight</a>
+    <a href="deleteFlight">Delete Flight</a>
+    <a href="updateFlight">Update Flight</a>
+    <a href="addCity">Add a new City</a>
+</ul>
+
+
+
+    <form action="addFlight" method="post">
+        Airplane type:<br>
+        <input type="text" name="AirplaneType" value=""/> <br>
+        Arrival City ID:<br>
+        <input type="text" name="ArrivalCityId" value=""/><br>
+        Departure City ID:<br>
+        <input type="text" name="DepartureCityId" value=""/> <br>
+        Departure time:<br>
+        <input type="datetime-local" name="DepartureTime" value=""/> <br>
+        Arrival time: <br>
+        <input type="datetime" name="ArrivalTime" value=""/><br>
+        <input type="submit"/>
+    </form>
+
+    <form action="addCity" method="post">
+        City name<br>
+        <input type="text" name="CityName"/><br>
+        Longitude<br>
+        <input type="text" name="Longitude"/><br>
+        Latitude<br>
+        <input type="text" name="Latitude"/><br>
+        <input type="submit"/>
+    </form>
+
+    <form action="deleteFlight" method="post">
+        Flight ID:<br>
+        <input type="number" name="flightId"/><br>
+        <input type="submit"/>
+    </form>
+
+    <form action="getLocalTimes" method="post">
+        <input type="hidden" value="" name="arrivalId">
+        <input type="hidden" value="" name="departureId">
+        <input type="submit" value="Get Local Times"/>
+    </form>
+
+    <form action="searchFlight" method="post">
+        Flight id: <br>
+        <input type="number" name="id"><br>
+        <input type="submit">
+    </form>
+
+    <form action="updateFlight" method="get">
+        Flight id: <br>
+        <input type="number" name="id"><br>
+        <input type="submit">
+    </form>
+
+</body>
+</html>
